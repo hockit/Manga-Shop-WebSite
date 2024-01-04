@@ -1,60 +1,95 @@
 body{background-color: lightgrey;}
 
+/* Navbar container */
 .navbar {
     overflow: hidden;
-    background-color: black;
+    background-color: #9933ff;
     font-family: Arial;
 }
 
+/* Links inside the navbar */
 .navbar a {
     float: left;
     font-size: 16px;
     color: white;
     text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
 }
 
+/* The dropdown container */
 .dropdown {
     float: left;
     overflow: hidden;
 }
 
-.dropdown .dropbtn {
+/* Dropdown button */
+.dropdown .dropdown-button {
     font-size: 16px;
     border: none;
     outline: none;
     color: white;
+    padding: 14px 16px;
     background-color: inherit;
-    font-family: inherit;
+    font: inherit;
     margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: darkgreen;
+/* Add a background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropdown-button {
+    background-color: #006600;
 }
 
+/* Dropdown content (hidden by default) */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: aqua;
-    min-width: 160px;
+    background-color: #006600;
+    width: 100%;
+    left: 0;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 
-.dropdown-content a {
+/* Menu header, if needed*/
+.dropdown-content .header {
+    background: #006600;
+    padding: 10px;
+    color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: none;
+    background-color: #ccc;
+    height: 250px;
+}
+
+/* Style links inside the columns */
+.column a {
     float: none;
     color: black;
-    padding: 12px 16px;
+    padding: 16px;
     text-decoration: none;
     display: block;
     text-align: left;
 }
 
-.dropdown-content a:hover {
+/* Add a background color on hover */
+.column a:hover {
     background-color: #ddd;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
